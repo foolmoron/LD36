@@ -21,6 +21,9 @@ public class SphereSpiky : MonoBehaviour {
         Amplitude = Mathf.Lerp(0, 15, s.y);
         childRenderer.material.SetFloat("_Amplitude", Amplitude);
         t += Time.deltaTime * PhaseMult;
+        if (Mathf.Abs(Mathf.Sin(t)) < 0.1f) {
+            childRenderer.material.SetFloat("_Seed", Random.value);
+        }
         childRenderer.material.SetFloat("_Phase", Mathf.Abs(Mathf.Sin(t)));
     }
 }
