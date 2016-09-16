@@ -16,7 +16,7 @@ public class Cube : MonoBehaviour {
         particles.startSize = Mathf.Lerp(0, 2.5f, s.x);
         var emission = particles.emission;
         var rate = emission.rate;
-        rate.constantMax = rate.constantMin = Mathf.Lerp(0, 1200, s.y);
+        rate.constantMax = rate.constantMin = Mathf.Lerp(0, 3000, s.y);
         emission.rate = rate;
     }
 }
